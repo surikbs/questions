@@ -1,0 +1,77 @@
+
+AWS
+###########
+* What is Amazon RDS ?
+* What is EC2, S3, EBS ?
+* What is VPC & why we require to create VPC ?
+* Is is possible to scale an Ec2 Instance vertically ?
+* How is Amazon RDS, Redshift & DynamoDB different ?
+* How is a spot Instance different from an On-demand Instance ?
+* How Infrastructure As Code processed & executes in AWS ?
+* If your Linux-build server getting slow down, what will you do to check ?
+* Types of EBS storage ? 
+ General Purpose SSD ( gp2 ), 
+ Provisioned IOPS SSD ( io1 ), 
+ Throughput Optimized HDD ( st1 ), 
+ Cold HDD ( sc1 ), 
+ Magnetic ( standard , a previous-generation type).
+ 
+* How to backup a running instance ? 
+* How to secure s3 bucket ?
+* What are the security available for users to access S3 ?
+Amazon S3 offers access policy options broadly categorized as resource-based policies and user policies. Access policies you attach to your resources (buckets and objects) are referred 
+to as resource-based policies. For example, bucket policies and access control lists (ACLs) are resource-based policies. You can also attach access policies to users in your account.
+ These are called user policies. You may choose to use resource-based policies, user policies, or some combination of these to manage permissions to your Amazon S3 resources.
+ The introductory topics provide general guidelines for managing permissions
+ 
+* How to create AMI ? 
+* What are the main components of CloudFormation ?
+* What is mapping in cloudformation template ? 
+* How is YAML different from JSON ? 
+* Different types of ELB ? 
+* What is autoscaling group ?
+* Which type of ELB is good for application load ?
+* What is difference between application load balancer & classic load balancer ?
+aws.amazon.com
+The Classic Load Balancer operates on both the request and connection levels. ...
+A Classic Load Balancer is recommended only for EC2 Classic instances. 
+The Application Load Balancer operates at the request level only. 
+If you're dealing with HTTP requests, which you are for your web application, you can use this
+
+* What is metrics in cloudwatch ?
+* Is it possible to recover your lost private key ?
+
+Amazon EC2 doesn't keep a copy of your private key; therefore, if you lose a private key, there is no way to recover it. ...
+If you lose the private key for an EBS-backed Linux instance, you can regain access to your instance
+
+* How can you connect your EC2 Instance if you lost your key ?
+* While connecting to your EC2 instances, what are the possible connection issues one might face ? 
+⦁ Connection timed out
+
+⦁ User key not recognized by the server
+
+⦁ Host key not found, permission denied
+
+⦁ Unprotected private key file (Company)
+
+⦁ Server refused our key or No supported authentication method available
+
+⦁ Error using MindTerm on Safari Browser
+
+⦁ Error using Mac OS X RDP Client
+
+* What is Subnet & how many subnets are there in a VPC ? 
+ If you create more than one subnet in a VPC, the CIDR blocks of the subnets cannot overlap. For example, 
+ if you create a VPC with CIDR block 10.0.0.0/24 , it supports 256 IP addresses. You can break this CIDR block into two subnets, each supporting 128 IP addresses.
+* Why do we make subnets ?
+It is logically isolated from other virtual networks in the AWS Cloud. You can launch your AWS resources, such as Amazon EC2 instances, into your VPC. ... 
+When you create a subnet, you specify the CIDR block for the subnet, which is a subset of the VPC CIDR block.
+* What is routing table ? 
+* How you can connect a private subnet with a public subnet ?
+* Can VPC peering possible in two different region ?
+AWS Task
+#############
+Task 1
+Write a script which will based on “Number of requests” metric of the ALB/ELB scale up webapp EC2 instances under the Load Balancer, increase AWS Elasticsearch Nodes count, and change the instance size of a MongoDB EC2 instance from m4.large to m4.xlarge. (without using ASG).
+Task 2
+Architecture Diagram for a PHP/JAVA/Python based application to be hosted on AWS with all mentions like VPC, AWS/any other cloud platform services, well defined network segregation.

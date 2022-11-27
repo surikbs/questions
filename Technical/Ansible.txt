@@ -1,0 +1,122 @@
+Ansible
+##########
+* What is Ansible ?
+* What is Configuration Management ?
+* Is Ansible only a tool for Configuration Management ?
+* What are the components of Ansible ?
+* How Ansible works ?
+* What are the other tools in market other than Ansible ?
+* How Ansible is different from Chef & Puppet ?
+* What is Inventory in Ansible ?
+* What are the types of Inventories ?
+* What is play & playbook ?
+* Difference between hosts & groups ? 
+* What is Roles ?
+
+Roles provide a framework for fully independent, or interdependent collections of variables, tasks, files, templates, and modules. In Ansible, 
+the role is the primary mechanism for breaking a playbook into multiple files. This simplifies writing complex playbooks, and it makes them easier to reuse
+* what is the ansible task?
+
+ a task is nothing more than a call to an ansible module 
+ 
+* How to install a Role ?
+* How to install multiple roles ?
+* How to create roles ?
+* What is Dynamic Inventory & when we use it & for what ?
+https://www.linuxtechi.com/manage-ansible-static-and-dynamic-host-inventory/
+
+* Where is the Ansible Configuration file located ?
+
+* What are the different ways other than SSH by which Ansible 
+  can connect to remote hosts ?
+  [root@ansible-mgmt apache]# ansible-doc -t connection -l
+buildah      Interact with an existing buildah container
+chroot       Interact with local chroot
+docker       Run tasks in docker containers
+funcd        Use funcd to connect to target
+httpapi      Use httpapi to run command on network appliances
+iocage       Run tasks in iocage jails
+jail         Run tasks in jails
+kubectl      Execute tasks in pods running on Kubernetes.
+libvirt_lxc  Run tasks in lxc containers via libvirt
+local        execute on controller
+lxc          Run tasks in lxc containers via lxc python library
+lxd          Run tasks in lxc containers via lxc CLI
+netconf      Provides a persistent connection using the netconf protocol
+network_cli  Use network_cli to run command on network appliances
+oc           Execute tasks in pods running on OpenShift.
+paramiko_ssh Run tasks via python ssh (paramiko)
+persistent   Use a persistent unix socket for connection
+saltstack    Allow ansible to piggyback on salt minions
+ssh          connect via ssh client binary
+winrm        Run tasks over Microsoft's WinRM
+zone         Run tasks in a zone instance
+[root@ansible-mgmt apache]#
+
+
+* What is variable in Ansible ?
+* What are different types of variables ?
+* How to assign variables in group vars & hosts vars ?
+* Difference between File & Template directory in Roles ?
+* Difference between default & vars directory in Roles ?
+* What is Jinja 2 template ?
+Jinja 2 supports Template Inheritance, which is one of the most powerful and useful features of any template engine. It means one template can inherit from another template
+* What is modules in Ansible ?
+* Difference between COPY & FILE modules ?
+* Difference between SHELL & COMMAND modules ?
+* What is Setup module ? what it does ?
+* What is register & debug in Ansible ?
+* What is changed_when in Ansible ?
+* Can we disable automatic facts gathering in Ansible ?
+* How error handling can be done in Ansible ?
+* How to ignore failed commands in Ansible ?
+* What is handlers ? Why we use Handlers in Ansible ?
+* What is Privilege Escalation in Ansible ?
+* Task to connect(SSH) Ansible to remote host using another user & 
+  run the playbook to the remote host using with another user ?
+* What is Ansible vault ?
+* How to decrypt a vault file ?
+* How to encrypt a string in Ansible using Ansible Vault ?
+* If a string is encrypted in a file with a password then how to pass 
+  the password using parameter while decrypting ?
+* If a file is encrypted using password & password is stored in a file 
+  how to pass the file to decrypt the file ?
+* If a file is encrypted using password & password is also encrypted 
+  then how to provide the password while decrypting the file ?
+* What is Ansible galaxy ?
+Ansible Galaxy refers to the Galaxy website where users can share roles, and to a command line tool for installing, creating and managing roles
+* What is Tags in Ansible ? Why it is used ?
+* What is lookup in Ansible playbook ?
+* How to control the command failure in Ansible ?
+* How to debug your playbook ?
+* What is diff mode ?
+* What is Dry Run in Ansible & how to do that ?
+* What is pre task & post task ?
+* How you can run your all tasks at once ? 
+* what is the ansible role?
+Roles provide a framework for fully independent, or interdependent collections of variables, tasks, files, templates, and modules. In Ansible,
+the role is the primary mechanism for breaking a playbook into multiple files. This simplifies writing complex playbooks, and it makes them easier to reuse.
+* What is block in Ansible ?
+* What are different variable scopes ?
+* How variable precedence takes place ?
+* Difference between include & import ?
+he main difference is: All import* statements are pre-processed at the time playbooks are parsed. All include* statements are processed as they encountered
+ during the execution of the playbook. Imports are static, includes are dynamic.
+* How to include custom modules in Ansible ?
+* Describe the role directory structure ?
+
+The anatomy of an Ansible role. The concept of an Ansible role is simple; it is a group of variables, tasks, files, and handlers that are stored in a standardized file structure. 
+... You have the freedom to branch your tasks and variables into other files within each director
+
+Ansible Task
+#############
+Task 1
+Part 1. Write Ansible playbook to automate Jenkins deployment
+Part 2. Write Ansible role to install Docker & setup Kubernetes cluster 
+Automate the pipeline creation in Jenkins to create docker container & deploy on Kubernetes cluster
+Task 2
+Write ansible playbook for below tasks:
+1. Install apache server and deploy sample html application
+2. Create /var/www/example.com
+3. deploy a sample application to the above directory
+4. create a virtual host for deploy application and set it as default virtualhost
